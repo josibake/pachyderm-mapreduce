@@ -1,0 +1,15 @@
+{
+	"pipeline":{
+		"name": "wordcount"
+	},
+	"transform":{
+		"cmd": ["python", "/wordcount.py", "/pfs/text-files", "/pfs/out"],
+		"image": "pach-wordcount:v1"
+	},
+	"input":{
+		"pfs":{
+			"repo":"text-files",
+			"glob":"/*"
+		}
+	}
+}

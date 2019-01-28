@@ -1,0 +1,15 @@
+{
+	"pipeline":{
+		"name": "wordsum"
+	},
+	"transform":{
+		"cmd": ["python", "/wordsum.py", "/pfs/wordcount", "/pfs/out"],
+		"image": "pach-wordsum:v1"
+	},
+	"input":{
+		"pfs":{
+			"repo":"wordcount",
+			"glob":"/"
+		}
+	}
+}
